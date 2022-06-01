@@ -6,7 +6,10 @@ CREATE TABLE IF NOT EXISTS `CURRENCY`(
     `CREATE_TIME` DATETIME NOT NULL DEFAULT NOW(),
     `UPDATE_TIME` DATETIME NOT NULL DEFAULT NOW()
 );
+
 INSERT INTO CURRENCY (ID, CODE, CHINESE_NAME, DESCRIPTION, CREATE_TIME, UPDATE_TIME)
 VALUES(1, 'USD', '美元', '', NOW(), NOW()),
 (2, 'GBP', '英鎊', '', NOW(), NOW()),
 (3, 'EUR', '歐元', '', NOW(), NOW());
+
+alter sequence hibernate_sequence restart with 4;

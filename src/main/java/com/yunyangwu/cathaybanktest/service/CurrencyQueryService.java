@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT, timeout = 36000, rollbackFor = Exception.class)
@@ -23,5 +24,10 @@ public class CurrencyQueryService {
 
     public Currency findByCode(String code) {
         return repository.findByCode(code);
+    }
+
+    public Currency findById(Long id) {
+        Optional<Currency> currency = repository.findById(id);
+        return currency.orElse(null);
     }
 }
