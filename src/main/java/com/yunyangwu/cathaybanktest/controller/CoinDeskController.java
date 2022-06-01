@@ -16,7 +16,7 @@ import java.util.Collections;
 
 
 @RestController
-@RequestMapping("api/v1/coinDesk")
+@RequestMapping("api/v1/coinDesk/CurrentPrice")
 @AllArgsConstructor
 public class CoinDeskController {
 
@@ -24,7 +24,7 @@ public class CoinDeskController {
 
     private CoinDeskQueryService coinDeskQueryService;
 
-    @GetMapping("/getCurrentPrice")
+    @GetMapping
     public CoinDeskResponse getDataFromAPI() throws ParseException {
 
         MappingJackson2HttpMessageConverter javascriptConverter = new MappingJackson2HttpMessageConverter();
@@ -34,7 +34,7 @@ public class CoinDeskController {
         return restTemplate.getForObject(baseUrl, CoinDeskResponse.class);
     }
 
-    @GetMapping("/getCurrentPrice/new")
+    @GetMapping("/new")
     public CoinDesk getCoinDeskFromAPI() throws ParseException {
         MappingJackson2HttpMessageConverter javascriptConverter = new MappingJackson2HttpMessageConverter();
         javascriptConverter.setSupportedMediaTypes(Collections.singletonList(new MediaType("application", "javascript")));
