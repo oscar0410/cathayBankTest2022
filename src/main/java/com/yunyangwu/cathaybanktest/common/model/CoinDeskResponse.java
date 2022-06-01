@@ -1,7 +1,5 @@
 package com.yunyangwu.cathaybanktest.common.model;
 
-import com.yunyangwu.cathaybanktest.model.coindesk.CoinDeskBpi;
-import com.yunyangwu.cathaybanktest.model.coindesk.CoinDeskTime;
 import lombok.Data;
 import lombok.ToString;
 
