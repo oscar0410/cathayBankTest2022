@@ -11,9 +11,9 @@ import java.util.Date;
 @ToString
 public class CoinDeskTime {
 
-    private String updated;
+    private Date updated;
 
-    private String updatedISO;
+    private Date updatedISO;
 
-    private String updateduk;
+    private Date updatedUK;
 }
