@@ -1,12 +1,14 @@
 package com.yunyangwu.cathaybanktest.model.coindesk;
 
 import com.yunyangwu.cathaybanktest.common.model.CoinDeskBpiResponse;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
 import java.math.BigDecimal;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class CoinDeskBpi {
 

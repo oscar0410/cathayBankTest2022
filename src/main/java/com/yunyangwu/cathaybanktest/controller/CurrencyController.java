@@ -40,14 +40,16 @@ public class CurrencyController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    public void create(@Valid @RequestBody CurrencyCreateRequest request) {
+    public String create(@Valid @RequestBody CurrencyCreateRequest request) {
         Currency currency = queryService.findByCode(request.getCode());
         if (currency == null) {
             operationService.create(request);
+            return "Created Done!";
         }
+        return "";
     }
 
-    @PatchMapping
+    @PutMapping("/{code}")
     public Currency update(@RequestBody CurrencyPatchRequest request) {
         Currency currency = queryService.findByCode(request.getCode());
         if (currency != null) {
@@ -56,8 +58,9 @@ public class CurrencyController {
         return currency;
 
     }
+
     @DeleteMapping("/{code}")
-    public void delete(@PathVariable(name = "code")String code){
+    public void delete(@PathVariable(name = "code") String code) {
         Currency currency = queryService.findByCode(code.toUpperCase());
         operationService.delete(currency);
     }

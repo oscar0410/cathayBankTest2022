@@ -26,7 +26,6 @@ public class CurrencyOperaService {
         currency.setDescription(request.getDescription());
         currency.setName(request.getName());
         currency.setCreatedDate(date);
-        currency.setUpdatedDate(date);
         repository.save(currency);
     }
 

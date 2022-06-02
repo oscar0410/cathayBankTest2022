@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "33ee9117-0195-4f92-a934-34ae67b394b9",
+		"name": "CathayBankTest2022",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12642380"
+	},
+	"item": [
+		{
+			"name": "getCoinDeskDataFromAPI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/coinDesk/CurrentPrice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"coinDesk",
+						"CurrentPrice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCoinDeskDataFromAPI New",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/coinDesk/CurrentPrice/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"coinDesk",
+						"CurrentPrice",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllCurrency",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/currency",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"currency"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findCurrencyByCode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/currency/USD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"currency",
+						"USD"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Currency",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"TWD\",\r\n    \"name\": \"新台幣\",\r\n    \"description\": \"加入新台幣資料\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/currency",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"currency"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCurrency",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"TWD\",\r\n    \"name\": \"新台幣\",\r\n    \"description\": \"Update\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/currency/TWD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"currency",
+						"TWD"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCurrency",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"TWD\",\r\n    \"name\": \"新台幣\",\r\n    \"description\": \"Update\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/currency/TWD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"currency",
+						"TWD"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "currentprice.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.coindesk.com/v1/bpi/currentprice.json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"coindesk",
+						"com"
+					],
+					"path": [
+						"v1",
+						"bpi",
+						"currentprice.json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

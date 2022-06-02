@@ -23,7 +23,7 @@ public class CurrencyQueryService {
     }
 
     public Currency findByCode(String code) {
-        return repository.findByCode(code);
+        return repository.findByCode(code.toUpperCase());
     }
 
     public Currency findById(Long id) {
