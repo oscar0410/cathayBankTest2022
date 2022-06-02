@@ -41,7 +41,6 @@ public class CoinDeskController {
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.getMessageConverters().add(javascriptConverter);
         CoinDeskResponse response = restTemplate.getForObject(baseUrl, CoinDeskResponse.class);
-        CoinDesk coinDesk = coinDeskQueryService.getNewCurrentPriceData(response);
-        return coinDesk;
+        return coinDeskQueryService.getNewCurrentPriceData(response);
     }
 }

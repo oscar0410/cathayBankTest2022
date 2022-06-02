@@ -1,13 +1,15 @@
 package com.yunyangwu.cathaybanktest.model.coindesk;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.Date;
 import java.util.Map;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class CoinDesk {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
