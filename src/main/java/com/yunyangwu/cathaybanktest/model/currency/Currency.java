@@ -1,12 +1,14 @@
 package com.yunyangwu.cathaybanktest.model.currency;
 
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
 
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @ToString
 @Entity
 @Table(name = "CURRENCY")

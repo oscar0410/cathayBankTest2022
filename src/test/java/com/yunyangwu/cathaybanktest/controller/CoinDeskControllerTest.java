@@ -19,9 +19,6 @@ public class CoinDeskControllerTest {
     @LocalServerPort
     private int port;
 
-    @Autowired
-    private CurrencyRepository currencyRepository;
-
     @Test
     public void testCallCoinDeskAPI() throws Exception {
         String url = "http://localhost:" + port + "/api/v1/coinDesk/CurrentPrice";

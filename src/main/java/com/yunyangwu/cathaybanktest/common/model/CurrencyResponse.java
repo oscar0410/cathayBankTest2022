@@ -2,14 +2,14 @@ package com.yunyangwu.cathaybanktest.common.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.yunyangwu.cathaybanktest.model.currency.Currency;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.Date;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class CurrencyResponse {
 
